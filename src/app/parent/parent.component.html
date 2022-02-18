@@ -1,0 +1,5 @@
+<select [(ngModel)]="id" (ngModelChange)="onChange($event)">
+  <option [value]="" selected >Choose Name</option>
+  <option [ngValue]="items.Id" class="items" *ngFor="let items of dropDownData" >{{items.name}}</option>
+</select>
+<app-child [id]="id"></app-child>
